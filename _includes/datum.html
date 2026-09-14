@@ -1,0 +1,6 @@
+{%- comment -%}
+Datum in het Nederlands. Gebruik: {% include datum.html datum=page.date %}
+{%- endcomment -%}
+{%- assign maanden = "januari,februari,maart,april,mei,juni,juli,augustus,september,oktober,november,december" | split: "," -%}
+{%- assign i = include.datum | date: "%-m" | plus: 0 | minus: 1 -%}
+{{ include.datum | date: "%-d" }} {{ maanden[i] }} {{ include.datum | date: "%Y" }}

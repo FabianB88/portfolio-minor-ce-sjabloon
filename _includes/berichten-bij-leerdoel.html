@@ -1,0 +1,18 @@
+{%- comment -%}
+Logboekberichten die dit leerdoel raken. Gebruik: {% include berichten-bij-leerdoel.html nummer=page.nummer %}
+{%- endcomment -%}
+{%- assign gevonden = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- if post.leerdoelen contains include.nummer -%}
+    {%- assign gevonden = gevonden | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if gevonden.size > 0 -%}
+<ul class="lijst">
+{%- for post in gevonden -%}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="meta">{% include datum.html datum=post.date %}{% if post.focus %} · {{ post.focus }}{% endif %}</span></li>
+{%- endfor -%}
+</ul>
+{%- else -%}
+<p class="stil">Nog geen logboekberichten bij dit leerdoel.</p>
+{%- endif -%}

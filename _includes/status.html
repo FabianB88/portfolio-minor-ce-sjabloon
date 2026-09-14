@@ -1,0 +1,11 @@
+{%- comment -%}
+Statusregel met icoon. Gebruik: {% include status.html status=page.status %}
+{%- endcomment -%}
+{%- assign s = include.status | default: "gepland" -%}
+<span class="status status-{{ s }}">
+{%- case s -%}
+{%- when "behaald" -%}{% include icoon.html naam="circle-check" %}Behaald
+{%- when "bezig" -%}{% include icoon.html naam="circle-dot" %}Bezig
+{%- else -%}{% include icoon.html naam="circle-dashed" %}Gepland
+{%- endcase -%}
+</span>

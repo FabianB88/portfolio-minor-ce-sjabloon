@@ -1,0 +1,199 @@
+/* Portfolio minor Circulaire Economie
+   Palet: warm beige met saliegroen (Green Office). */
+
+:root {
+  --achtergrond: #F7F4F0;
+  --vlak: #F2EEE9;
+  --rand: #E4DDD6;
+  --rand-zacht: #EDE8E3;
+  --tekst: #1C1713;
+  --tekst-2: #7A6E66;
+  --gedimd: #B0A49A;
+  --accent: #5C7A5A;
+  --accent-licht: #EDF3EC;
+  --accent-medium: #D0E3CF;
+  --warm: #B5916A;
+  --koel: #7A8FA6;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--tekst);
+  background: var(--achtergrond);
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--tekst); }
+
+h1, h2, h3 { line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: 2rem; margin: 0.2em 0 0.6em; }
+h2 { font-size: 1.25rem; margin: 2.2em 0 0.6em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 0.4em; }
+p, ul, ol { margin: 0 0 1em; }
+
+img { max-width: 100%; height: auto; }
+
+blockquote {
+  margin: 1.2em 0;
+  padding: 0 0 0 1em;
+  border-left: 3px solid var(--accent-medium);
+  color: var(--tekst-2);
+}
+
+/* Kop en menu */
+
+.kop {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.8rem 0 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 2rem;
+  border-bottom: 1px solid var(--rand);
+}
+.kop-tekst { display: flex; flex-direction: column; }
+.kop-naam { font-weight: 600; font-size: 1.1rem; color: var(--tekst); text-decoration: none; }
+.kop-sub { color: var(--tekst-2); font-size: 0.9rem; }
+
+.menu { display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; }
+.menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--tekst-2);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+.menu a:hover { color: var(--tekst); }
+.menu a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Inhoud */
+
+.inhoud { max-width: 760px; margin: 0 auto; padding: 1.5rem 0 3rem; }
+.intro p { font-size: 1.08rem; }
+.voet {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.2rem 0 2rem;
+  border-top: 1px solid var(--rand);
+  color: var(--tekst-2);
+  font-size: 0.85rem;
+}
+
+.icoon { width: 1.1em; height: 1.1em; vertical-align: -0.2em; flex: none; }
+
+.label {
+  margin: 0 0 0.3em;
+  color: var(--tekst-2);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.terug { margin: 0 0 1.4em; font-size: 0.9rem; }
+.terug a { display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; color: var(--tekst-2); }
+.terug a:hover { color: var(--accent); }
+
+.kenmerken {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0 0 1.8em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid var(--rand);
+  color: var(--tekst-2);
+  font-size: 0.95rem;
+}
+.kenmerk { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* Status */
+
+.status { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 500; white-space: nowrap; }
+.status .icoon { width: 1.25em; height: 1.25em; }
+.status-behaald { color: var(--accent); }
+.status-bezig { color: var(--warm); }
+.status-gepland { color: var(--tekst-2); }
+.status-gepland .icoon { color: var(--gedimd); }
+
+/* Voortgangsbalk */
+
+.samenvatting { color: var(--tekst-2); margin-bottom: 0.6em; }
+.balk {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent-licht);
+  overflow: hidden;
+  margin-bottom: 1.4em;
+}
+.balk span { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+
+/* Lijsten */
+
+.overzicht, .lijst { list-style: none; padding: 0; margin: 0 0 1.2em; }
+
+.overzicht .rij {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rand-zacht);
+}
+.overzicht .rij:first-child { border-top: 1px solid var(--rand-zacht); }
+.rij .status { grid-row: span 2; align-self: start; padding-top: 0.15em; }
+.rij-titel { font-weight: 500; text-decoration: none; }
+.rij-titel:hover { text-decoration: underline; }
+.rij .meta { display: block; }
+
+.lijst li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.7rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rand-zacht);
+}
+.lijst li:first-child { border-top: 1px solid var(--rand-zacht); }
+.lijst .icoon { color: var(--tekst-2); }
+
+.meta { color: var(--tekst-2); font-size: 0.9rem; }
+.stil { color: var(--tekst-2); font-style: italic; }
+
+.blader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2.5em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--rand);
+  font-size: 0.95rem;
+}
+
+/* Inhoud die studenten zelf schrijven */
+
+.detail h2 { padding-top: 0.2em; }
+.detail ul:not(.lijst) { padding-left: 1.3em; }
+.detail ul:not(.lijst) li { margin-bottom: 0.3em; }
+
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.5em 0.6em; border-bottom: 1px solid var(--rand-zacht); }
+th { color: var(--tekst-2); font-weight: 500; }
+
+code { font-size: 0.9em; background: var(--vlak); padding: 0.1em 0.35em; border-radius: 4px; }
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+  .kop { padding-top: 1.2rem; }
+  .menu { gap: 0.2rem 1rem; }
+}

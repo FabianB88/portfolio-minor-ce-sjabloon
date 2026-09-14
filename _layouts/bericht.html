@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="detail">
+  <p class="terug"><a href="{{ '/logboek/' | relative_url }}">{% include icoon.html naam="arrow-left" %}Alle berichten</a></p>
+  <p class="label">{% include datum.html datum=page.date %}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="kenmerken">
+    {% if page.focus %}<span class="kenmerk">{% include icoon.html naam="compass" %}Focusgebied: {{ page.focus }}</span>{% endif %}
+    {%- if page.project -%}
+      {%- for project in site.projecten -%}{%- if project.sleutel == page.project -%}
+      <span class="kenmerk">{% include icoon.html naam="folder" %}<a href="{{ project.url | relative_url }}">{{ project.title }}</a></span>
+      {%- endif -%}{%- endfor -%}
+    {%- endif -%}
+  </p>
+
+  {{ content }}
+
+  {%- if page.leerdoelen and page.leerdoelen.size > 0 -%}
+  <h2>Raakt deze leerdoelen</h2>
+  <ul class="lijst">
+  {%- assign doelen = site.leerdoelen | sort: "nummer" -%}
+  {%- for doel in doelen -%}
+    {%- if page.leerdoelen contains doel.nummer -%}
+    <li>{% include status.html status=doel.status %}<a href="{{ doel.url | relative_url }}">{{ doel.nummer }}. {{ doel.title }}</a></li>
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+  <p class="blader">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">Ouder: {{ page.previous.title }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}">Nieuwer: {{ page.next.title }}</a>{% endif %}
+  </p>
+</article>

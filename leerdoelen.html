@@ -1,0 +1,23 @@
+---
+layout: pagina
+title: Leerdoelen
+permalink: /leerdoelen/
+---
+{%- assign doelen = site.leerdoelen | sort: "nummer" -%}
+<p>Mijn leerdoelen voor deze minor. Elk leerdoel heeft een status, een streefdatum en de bewijsstukken waarmee ik laat zien dat ik het heb behaald.</p>
+<ul class="overzicht">
+{%- for doel in doelen -%}
+  {%- assign n = 0 -%}
+  {%- for post in site.posts -%}{%- if post.leerdoelen contains doel.nummer -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+  {%- assign b = 0 -%}
+  {%- if doel.bewijs -%}{%- assign b = doel.bewijs | size -%}{%- endif -%}
+  <li class="rij">
+    {% include status.html status=doel.status %}
+    <a class="rij-titel" href="{{ doel.url | relative_url }}">{{ doel.nummer }}. {{ doel.title }}</a>
+    <span class="meta">
+      {%- if doel.streefdatum %}streefdatum {% include datum.html datum=doel.streefdatum %} · {% endif -%}
+      {{ n }} {% if n == 1 %}bericht{% else %}berichten{% endif %} · {{ b }} {% if b == 1 %}bewijsstuk{% else %}bewijsstukken{% endif %}
+    </span>
+  </li>
+{%- endfor -%}
+</ul>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.naam }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="kop">
+    <div class="kop-tekst">
+      <a class="kop-naam" href="{{ '/' | relative_url }}">{{ site.naam }}</a>
+      <span class="kop-sub">{{ site.title }}</span>
+    </div>
+    <nav class="menu" aria-label="Hoofdmenu">
+      <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>{% include icoon.html naam="house" %}Start</a>
+      <a href="{{ '/leerdoelen/' | relative_url }}"{% if page.url contains "/leerdoelen/" %} aria-current="page"{% endif %}>{% include icoon.html naam="target" %}Leerdoelen</a>
+      <a href="{{ '/projecten/' | relative_url }}"{% if page.url contains "/projecten/" %} aria-current="page"{% endif %}>{% include icoon.html naam="folder" %}Projecten</a>
+      <a href="{{ '/logboek/' | relative_url }}"{% if page.url contains "/logboek/" %} aria-current="page"{% endif %}>{% include icoon.html naam="book-open" %}Logboek</a>
+    </nav>
+  </header>
+  <main class="inhoud">
+    {{ content }}
+  </main>
+  <footer class="voet">
+    <p>{{ site.naam }} · {{ site.opleiding }} · minor Circulaire Economie, {{ site.cohort }}</p>
+  </footer>
+</body>
+</html>

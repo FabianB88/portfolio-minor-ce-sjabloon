@@ -1,0 +1,15 @@
+---
+layout: pagina
+title: Projecten
+permalink: /projecten/
+---
+<p>De projecten en deelproducten waar ik in deze minor aan werk.</p>
+<ul class="overzicht">
+{%- for project in site.projecten -%}
+  <li class="rij">
+    {% include status.html status=project.status %}
+    <a class="rij-titel" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    <span class="meta">{{ project.opdrachtgever }}{% if project.periode %} · {{ project.periode }}{% endif %}</span>
+  </li>
+{%- endfor -%}
+</ul>

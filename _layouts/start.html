@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{%- assign doelen = site.leerdoelen | sort: "nummer" -%}
+{%- assign behaald = doelen | where: "status", "behaald" | size -%}
+{%- assign bezig = doelen | where: "status", "bezig" | size -%}
+<section class="intro">
+  <h1>{{ site.naam }}</h1>
+  {{ content }}
+</section>
+
+<section>
+  <h2>Voortgang op mijn leerdoelen</h2>
+  <p class="samenvatting">{{ behaald }} van {{ doelen.size }} leerdoelen behaald, {{ bezig }} in uitvoering.</p>
+  <div class="balk" role="img" aria-label="{{ behaald }} van {{ doelen.size }} leerdoelen behaald">
+    {%- if doelen.size > 0 -%}
+    {%- assign pct = behaald | times: 100.0 | divided_by: doelen.size -%}
+    <span style="width: {{ pct }}%"></span>
+    {%- endif -%}
+  </div>
+  <ul class="overzicht">
+  {%- for doel in doelen -%}
+    {%- assign n = 0 -%}
+    {%- for post in site.posts -%}{%- if post.leerdoelen contains doel.nummer -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- assign b = 0 -%}
+    {%- if doel.bewijs -%}{%- assign b = doel.bewijs | size -%}{%- endif -%}
+    <li class="rij">
+      {% include status.html status=doel.status %}
+      <a class="rij-titel" href="{{ doel.url | relative_url }}">{{ doel.nummer }}. {{ doel.title }}</a>
+      <span class="meta">
+        {%- if doel.streefdatum %}streefdatum {% include datum.html datum=doel.streefdatum %} · {% endif -%}
+        {{ n }} {% if n == 1 %}bericht{% else %}berichten{% endif %} · {{ b }} {% if b == 1 %}bewijsstuk{% else %}bewijsstukken{% endif %}
+      </span>
+    </li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>Projecten</h2>
+  <ul class="overzicht">
+  {%- for project in site.projecten -%}
+    <li class="rij">
+      {% include status.html status=project.status %}
+      <a class="rij-titel" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      <span class="meta">{{ project.opdrachtgever }}{% if project.periode %} · {{ project.periode }}{% endif %}</span>
+    </li>
+  {%- endfor -%}
+  </ul>
+</section>
+
+<section>
+  <h2>Laatste logboekberichten</h2>
+  <ul class="lijst">
+  {%- for post in site.posts limit: 5 -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="meta">{% include datum.html datum=post.date %}{% if post.focus %} · {{ post.focus }}{% endif %}</span></li>
+  {%- endfor -%}
+  </ul>
+  <p><a href="{{ '/logboek/' | relative_url }}">Alle berichten</a></p>
+</section>

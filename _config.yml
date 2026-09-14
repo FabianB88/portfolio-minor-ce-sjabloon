@@ -1,0 +1,48 @@
+# Instellingen van het portfolio. Pas alleen de eerste regels aan.
+title: Portfolio minor Circulaire Economie
+naam: Noor Jansen
+opleiding: Bedrijfskunde, HAN
+cohort: september 2026
+description: Leerdoelen, projecten en logboek van de minor Circulaire Economie
+
+# Hieronder hoef je niets te veranderen.
+lang: nl
+timezone: Europe/Amsterdam
+markdown: kramdown
+permalink: /logboek/:year/:month/:day/:title/
+
+collections:
+  leerdoelen:
+    output: true
+    permalink: /leerdoelen/:name/
+  projecten:
+    output: true
+    permalink: /projecten/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: leerdoelen
+    values:
+      layout: leerdoel
+  - scope:
+      path: ""
+      type: projecten
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: bericht
+  - scope:
+      path: ""
+    values:
+      layout: pagina
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor

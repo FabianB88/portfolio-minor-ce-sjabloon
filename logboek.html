@@ -1,0 +1,17 @@
+---
+layout: pagina
+title: Logboek
+permalink: /logboek/
+---
+<p>Mijn wekelijkse voortgangsrapportage. Bij elk bericht staat in welk focusgebied ik vooral zat en welke leerdoelen het raakt.</p>
+<ul class="overzicht">
+{%- for post in site.posts -%}
+  <li class="rij">
+    <span class="status">{% include icoon.html naam="book-open" %}</span>
+    <a class="rij-titel" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="meta">{% include datum.html datum=post.date %}{% if post.focus %} · {{ post.focus }}{% endif %}
+      {%- if post.leerdoelen and post.leerdoelen.size > 0 %} · leerdoel {{ post.leerdoelen | join: ", " }}{% endif -%}
+    </span>
+  </li>
+{%- endfor -%}
+</ul>

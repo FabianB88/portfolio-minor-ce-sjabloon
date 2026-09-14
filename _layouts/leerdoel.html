@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="detail">
+  <p class="terug"><a href="{{ '/leerdoelen/' | relative_url }}">{% include icoon.html naam="arrow-left" %}Alle leerdoelen</a></p>
+  <p class="label">Leerdoel {{ page.nummer }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="kenmerken">
+    {% include status.html status=page.status %}
+    {% if page.streefdatum %}<span class="kenmerk">{% include icoon.html naam="calendar" %}Streefdatum {% include datum.html datum=page.streefdatum %}</span>{% endif %}
+  </p>
+
+  {{ content }}
+
+  <h2>Bewijsstukken</h2>
+  {%- if page.bewijs and page.bewijs.size > 0 -%}
+  <ul class="lijst">
+  {%- for stuk in page.bewijs -%}
+    <li>{% include icoon.html naam="paperclip" %}{% if stuk.url %}<a href="{{ stuk.url | relative_url }}">{{ stuk.tekst }}</a>{% else %}{{ stuk.tekst }}{% endif %}</li>
+  {%- endfor -%}
+  </ul>
+  {%- else -%}
+  <p class="stil">Nog geen bewijsstukken toegevoegd.</p>
+  {%- endif -%}
+
+  <h2>Logboek bij dit leerdoel</h2>
+  {% include berichten-bij-leerdoel.html nummer=page.nummer %}
+</article>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="detail">
+  <p class="terug"><a href="{{ '/projecten/' | relative_url }}">{% include icoon.html naam="arrow-left" %}Alle projecten</a></p>
+  <p class="label">Project</p>
+  <h1>{{ page.title }}</h1>
+  <p class="kenmerken">
+    {% include status.html status=page.status %}
+    {% if page.opdrachtgever %}<span class="kenmerk">{% include icoon.html naam="building" %}{{ page.opdrachtgever }}</span>{% endif %}
+    {% if page.periode %}<span class="kenmerk">{% include icoon.html naam="calendar" %}{{ page.periode }}</span>{% endif %}
+  </p>
+
+  {{ content }}
+
+  {%- if page.leerdoelen and page.leerdoelen.size > 0 -%}
+  <h2>Leerdoelen waar dit project aan bijdraagt</h2>
+  <ul class="lijst">
+  {%- assign doelen = site.leerdoelen | sort: "nummer" -%}
+  {%- for doel in doelen -%}
+    {%- if page.leerdoelen contains doel.nummer -%}
+    <li>{% include status.html status=doel.status %}<a href="{{ doel.url | relative_url }}">{{ doel.nummer }}. {{ doel.title }}</a></li>
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+  <h2>Logboek bij dit project</h2>
+  {%- assign gevonden = "" | split: "" -%}
+  {%- for post in site.posts -%}{%- if post.project == page.sleutel -%}{%- assign gevonden = gevonden | push: post -%}{%- endif -%}{%- endfor -%}
+  {%- if gevonden.size > 0 -%}
+  <ul class="lijst">
+  {%- for post in gevonden -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="meta">{% include datum.html datum=post.date %}{% if post.focus %} · {{ post.focus }}{% endif %}</span></li>
+  {%- endfor -%}
+  </ul>
+  {%- else -%}
+  <p class="stil">Nog geen logboekberichten bij dit project.</p>
+  {%- endif -%}
+</article>
