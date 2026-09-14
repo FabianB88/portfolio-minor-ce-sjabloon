@@ -5,7 +5,7 @@ status: behaald
 streefdatum: 2026-10-02
 bewijs:
   - tekst: Interviewvragen voor bewoners en de aannemer
-    url: /bewijs/interviewvragen-bewoners.html
+    url: /bewijs/interviewvragen-bewoners/
   - tekst: Verslag van drie bewonersgesprekken, gedeeld met de opdrachtgever (niet openbaar vanwege persoonsgegevens)
 ---
 

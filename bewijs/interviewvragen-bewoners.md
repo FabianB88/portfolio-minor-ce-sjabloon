@@ -1,6 +1,7 @@
 ---
 layout: pagina
 title: Interviewvragen voor bewoners en de aannemer
+permalink: /bewijs/interviewvragen-bewoners/
 ---
 
 Bewijsstuk bij leerdoel 1 en 2. Versie van 4 september 2026, geoefend met een medestudent.

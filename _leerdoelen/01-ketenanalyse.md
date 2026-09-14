@@ -7,7 +7,7 @@ bewijs:
   - tekst: Eerste ketenschets van een keuken (logboek week 2)
     url: /logboek/2026/09/04/week-2-eerste-ketenschets/
   - tekst: Interviewvragen voor bewoners en de aannemer
-    url: /bewijs/interviewvragen-bewoners.html
+    url: /bewijs/interviewvragen-bewoners/
 ---
 
 ## Wat ik wil kunnen
