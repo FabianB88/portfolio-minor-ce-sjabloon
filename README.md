@@ -2,7 +2,7 @@
 
 Dit is het sjabloon voor je portfolio in de minor Circulaire Economie. Je maakt er je eigen kopie van, en GitHub zet die om in een website waarop je leerdoelen, je projecten met een tijdlijn van het proces en je wekelijkse voortgang te zien zijn. Je vult alles in via formulieren op de site zelf; je hoeft geen code aan te raken en niets te installeren.
 
-Het sjabloon is gevuld met een fictieve student, Noor Jansen, en een fictieve opdrachtgever. Haar leerdoelen, project en logboekberichten laten zien wat de bedoeling is. Je vervangt ze door je eigen inhoud.
+Het sjabloon begint leeg. Wil je eerst zien hoe een ingevuld portfolio eruitziet, klik dan op de startpagina op **Bekijk een ingevuld voorbeeld**: dat laadt het portfolio van een fictieve student als concept, dat je daarna weer weggooit.
 
 ## Je eigen portfolio maken
 
@@ -36,6 +36,6 @@ Bestanden zet je in de map `bewijs` van je repository: open die map op GitHub, k
 
 ## Voor wie meer wil weten
 
-Alle inhoud staat in één bestand, `data/portfolio.json`. De formulieren schrijven dat bestand voor je; wie wil, kan het ook rechtstreeks op GitHub bewerken. De site zelf bestaat uit `index.html`, de stylesheet in `assets/css` en drie scripts in `assets/js`. Meer over hoe GitHub en GitHub Pages werken lees je in hulpmiddel 15 (AI naar website) in de [studentenhandleiding](https://fabianb88.github.io/minor-ce-studentenhandleiding/).
+Alle inhoud staat in één bestand, `data/portfolio.json`. De formulieren schrijven dat bestand voor je; wie wil, kan het ook rechtstreeks op GitHub bewerken. Het voorbeeld staat in `data/voorbeeld.json` en de map `voorbeeld`; die mag je verwijderen als je ze niet meer nodig hebt. De site zelf bestaat uit `index.html`, de stylesheet in `assets/css` en drie scripts in `assets/js`. Meer over hoe GitHub en GitHub Pages werken lees je in hulpmiddel 15 (AI naar website) in de [studentenhandleiding](https://fabianb88.github.io/minor-ce-studentenhandleiding/).
 
 De map `_jekyll-versie` bevat een eerdere opzet van dit sjabloon en wordt niet gebruikt.

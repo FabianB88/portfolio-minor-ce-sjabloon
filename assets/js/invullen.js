@@ -97,7 +97,23 @@ function tabProfiel() {
     veld('Cohort', 'student.cohort', { placeholder: 'Bijvoorbeeld: september 2026' }) +
     tekstveld('Over mij en mijn opdracht', 'student.intro', { rijen: 8, hulp: 'Wie je bent, voor wie je werkt en waar de site over gaat. Een lege regel begint een nieuwe alinea.' }) +
     veld('Adres van je GitHub-repository', 'student.repo', { placeholder: 'https://github.com/jouwnaam/portfolio-minor-ce', hulp: 'Alleen nodig als de site niet op github.io staat; anders wordt dit zelf gevonden.' }) +
-    '<p class="hulp">' + icoon('eye') + ' <a href="#/">Bekijk de startpagina</a> om te zien hoe het eruitziet.</p></form>';
+    '<p class="hulp">' + icoon('eye') + ' <a href="#/">Bekijk de startpagina</a> om te zien hoe het eruitziet.</p></form>' +
+    '<h2>Voorbeeld</h2>' +
+    '<p>Wil je eerst zien hoe een ingevuld portfolio eruitziet? Laad het voorbeeld van een fictieve student. Het komt als concept in deze browser te staan, bovenop wat je al had ingevuld; weggooien kan via Publiceren, Concept weggooien.</p>' +
+    '<p class="knoppen">' + knop('voorbeeld-laden', 'eye', 'Voorbeeld laden') + '</p><p id="publiceer-melding" class="melding" aria-live="polite"></p>';
+}
+
+function voorbeeldLaden() {
+  if (!isLeeg() && !confirm('Het voorbeeld vervangt wat je nu hebt ingevuld (als concept, dus niet online). Doorgaan?')) return;
+  fetch('data/voorbeeld.json', { cache: 'no-store' }).then(a => {
+    if (!a.ok) throw new Error(a.status);
+    return a.json();
+  }).then(d => {
+    S.data = d;
+    bewaarConcept();
+    location.hash = '#/';
+    render();
+  }).catch(() => melding(icoon('triangle-alert') + ' Het voorbeeld kon niet worden geladen.'));
 }
 
 function tabLeerdoelen() {
@@ -359,6 +375,7 @@ document.addEventListener('click', ev => {
       kopieerJson().then(ok => melding(ok ? icoon('check') + ' Gekopieerd naar het klembord.' : icoon('triangle-alert') + ' Kopiëren lukte niet; open de inhoud hieronder en kopieer zelf.'));
       break;
     case 'download-json': herbouw = false; downloadJson(); break;
+    case 'voorbeeld-laden': voorbeeldLaden(); return;
     case 'concept-weggooien':
       if (!heeftConcept()) { melding('Er is geen concept; je ziet al de online versie.'); return; }
       if (!confirm('Alle niet-gepubliceerde wijzigingen weggooien?')) return;

@@ -181,7 +181,28 @@ function projectFase(p) {
 
 /* ---------- pagina's ---------- */
 
+function isLeeg() {
+  const st = S.data.student || {};
+  return !st.naam && !st.intro && !(S.data.leerdoelen || []).length && !(S.data.projecten || []).length && !(S.data.updates || []).length;
+}
+
+function paginaWelkom() {
+  return '<section class="intro"><h1>Je portfolio is nog leeg</h1>' +
+    '<p>Dit is jouw portfolio voor de minor Circulaire Economie. Hier houd je je leerdoelen bij, de tijdlijn van je project en je wekelijkse voortgang. Alles vul je zelf in.</p>' +
+    '<p class="knoppen"><a class="knop" href="#/invullen">' + icoon('pencil') + 'Begin met invullen</a>' +
+    '<button type="button" class="knop knop-2" data-actie="voorbeeld-laden">' + icoon('eye') + 'Bekijk een ingevuld voorbeeld</button></p>' +
+    '<p id="publiceer-melding" class="melding" aria-live="polite"></p>' +
+    '<h2>Zo werkt het</h2>' +
+    '<ol class="stappen"><li>Zet bij <a href="#/invullen/profiel">Profiel</a> je naam en een korte tekst over jou en je opdracht.</li>' +
+    '<li>Formuleer bij <a href="#/invullen/leerdoelen">Leerdoelen</a> wat je aan het einde van de minor wilt kunnen, en waarom.</li>' +
+    '<li>Maak bij <a href="#/invullen/projecten">Projecten</a> je project aan met start- en einddatum, en zet de momenten op de tijdlijn: gesprekken, mijlpalen, presentaties.</li>' +
+    '<li>Schrijf elke week bij <a href="#/invullen/logboek">Logboek</a> wat je hebt gedaan, wat je hebt geleerd en wat je volgende stap is.</li>' +
+    '<li>Zet het online via <a href="#/invullen/publiceren">Publiceren</a>. Tot die tijd ziet alleen jij je wijzigingen.</li></ol>' +
+    '<p class="hulp">Het voorbeeld laadt als concept: je kunt het bekijken, ermee spelen en daarna weggooien via Publiceren, Concept weggooien.</p></section>';
+}
+
 function paginaStart() {
+  if (isLeeg()) return paginaWelkom();
   const st = S.data.student || {};
   const doelen = S.data.leerdoelen || [];
   const behaald = doelen.filter(l => l.status === 'behaald').length;
