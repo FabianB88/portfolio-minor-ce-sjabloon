@@ -1,6 +1,6 @@
 # Portfolio minor Circulaire Economie
 
-Dit is het sjabloon voor je portfolio in de minor Circulaire Economie. Je maakt er je eigen kopie van, en GitHub zet die automatisch om in een website waarop je leerdoelen, projecten en wekelijkse voortgang te zien zijn. Je hoeft niets te installeren: alles kan in de browser.
+Dit is het sjabloon voor je portfolio in de minor Circulaire Economie. Je maakt er je eigen kopie van, en GitHub zet die om in een website waarop je leerdoelen, je projecten met een tijdlijn van het proces en je wekelijkse voortgang te zien zijn. Je vult alles in via formulieren op de site zelf; je hoeft geen code aan te raken en niets te installeren.
 
 Het sjabloon is gevuld met een fictieve student, Noor Jansen, en een fictieve opdrachtgever. Haar leerdoelen, project en logboekberichten laten zien wat de bedoeling is. Je vervangt ze door je eigen inhoud.
 
@@ -10,34 +10,32 @@ Klik bovenaan deze pagina op **Use this template** en kies **Create a new reposi
 
 Ga daarna in je nieuwe repository naar **Settings**, klik links op **Pages**, kies bij Source voor **Deploy from a branch**, branch `main`, map `/ (root)`, en klik op Save. Na een paar minuten staat je site op `https://jouwgebruikersnaam.github.io/portfolio-minor-ce/`. Het adres staat op dezelfde instellingenpagina.
 
-## De drie handelingen die je nodig hebt
+## Invullen en publiceren
 
-Alles in dit portfolio is een tekstbestand. Om er iets in te veranderen open je het bestand op github.com, klik je rechtsboven op het potloodje, pas je de tekst aan en klik je op **Commit changes**. Een nieuw bestand maak je met **Add file** en dan **Create new file**. Een foto of pdf zet je erbij met **Add file** en dan **Upload files**. Dat is alles. Binnen een minuut staat de wijziging op je site.
+Open je site en klik in het menu op **Invullen**. Daar staan vier onderdelen: je profiel, je leerdoelen, je projecten en je logboek. Alles wat je daar typt zie je meteen terug op de rest van de site, als concept. Dat concept staat alleen in jouw browser; anderen zien nog de oude versie.
 
-Wil je meer weten over hoe GitHub en GitHub Pages werken, lees dan hulpmiddel 15 (AI naar website) in de [studentenhandleiding](https://fabianb88.github.io/minor-ce-studentenhandleiding/).
+Ben je tevreden, ga dan naar **Publiceren** en klik op **Kopieer en open GitHub**. Je hele portfolio wordt gekopieerd en GitHub opent het databestand in een nieuw tabblad. Klik in de editor, selecteer alles (Ctrl+A), plak (Ctrl+V) en klik op **Commit changes**. Na een minuut staat de nieuwe versie online en verdwijnt het concept vanzelf.
 
-## Wat waar staat
+Werk je op twee apparaten, publiceer dan steeds voordat je op het andere apparaat verdergaat. De site waarschuwt als er online al een nieuwere versie staat dan waar je concept op is gebaseerd.
 
-Je eigen naam, opleiding en cohort staan bovenaan in `_config.yml`. Dat is het enige instellingenbestand dat je aanpast.
+## Wat je invult
 
-De tekst op de startpagina staat in `index.md`: wie je bent, wat je opdracht is. Het voortgangsoverzicht eronder maakt de site zelf.
+Bij **Profiel** staan je naam, opleiding, cohort en een korte tekst over jou en je opdracht.
 
-Elk leerdoel is een bestand in de map `_leerdoelen`. Elk project is een bestand in `_projecten`. Elk logboekbericht is een bestand in `_posts`. Foto's, schetsen en documenten die je als bewijs wilt laten zien zet je in de map `bewijs`.
+Bij **Leerdoelen** heeft elk leerdoel een titel, een status (gepland, bezig of behaald), een voortgang in procenten, een streefdatum, een beschrijving, een reflectie en bewijsstukken. Schuif de voortgang bij als je een stap hebt gezet en werk dan ook de reflectie bij. Zet een leerdoel pas op behaald als er een reflectie staat; hulpmiddel 7 (Reflectie) uit de studentenhandleiding helpt daarbij.
 
-## Een leerdoel toevoegen of bijwerken
+Bij **Projecten** heeft elk project een opdrachtgever, een start- en einddatum en een lijst met momenten: gesprekken, mijlpalen, tussenpresentaties, opleveringen. Elk moment krijgt een datum en het focusgebied waarin je toen zat (Discover, Define, Develop of Deliver). De site tekent daar een tijdlijn van, met de punten in de kleur van het focusgebied. Momenten in de toekomst staan er als gepland op, dus je kunt de tijdlijn ook als planning gebruiken. Je logboekberichten bij het project komen er vanzelf bij.
 
-Open een bestaand leerdoel in `_leerdoelen` en bekijk de regels bovenaan tussen de streepjes. Daar staan vier dingen die de site gebruikt: de titel, het nummer, de status en de streefdatum. Daaronder kun je bewijsstukken opsommen, elk met een korte tekst en eventueel een link.
-
-De status is `gepland`, `bezig` of `behaald`. Verander je die, dan verandert het overzicht op de startpagina mee. Zet een leerdoel pas op behaald als je er ook een reflectie bij hebt geschreven; hulpmiddel 7 (Reflectie) uit de studentenhandleiding helpt daarbij.
-
-Een nieuw leerdoel maak je door een bestaand leerdoelbestand te kopiëren naar een nieuwe naam, bijvoorbeeld `04-mijn-leerdoel.md`, en het nummer bovenin op 4 te zetten. De nummers gebruik je om vanuit het logboek naar leerdoelen te verwijzen.
-
-## Een logboekbericht schrijven
-
-Maak in `_posts` een nieuw bestand met de datum vooraan in de naam: `2026-09-18-week-4.md`. Kopieer de kopregels van een bestaand bericht en vul in welk focusgebied je vooral in zat (Discover, Define, Develop of Deliver), bij welk project het hoort en welke leerdoelen het raakt, bijvoorbeeld `leerdoelen: [1, 3]`. Het bericht verschijnt dan vanzelf bij die leerdoelen en bij dat project.
+Bij **Logboek** schrijf je elke week een bericht: wat je hebt gedaan, wat je hebt geleerd en wat je volgende stap is. Je koppelt het aan een project en aan de leerdoelen die het raakt. Het bericht verschijnt dan bij die leerdoelen en op de tijdlijn van het project.
 
 Het focusgebied is een label voor waar je aandacht zat, geen fase die je afvinkt. Je kunt in week 8 gewoon weer in Discover zitten omdat een gesprek met de opdrachtgever alles op zijn kop zette; schrijf dat dan op, want dat is precies het soort inzicht waar het logboek voor bedoeld is.
 
-## Wat niet op de site hoort
+## Foto's en documenten als bewijs
 
-Je site is openbaar. Zet er geen namen, adressen of contactgegevens van bewoners, klanten of medewerkers op, en geen documenten die je opdrachtgever vertrouwelijk heeft gedeeld. Verwijs in zo'n geval naar het document zonder het te plaatsen, zoals in het voorbeeld bij leerdoel 2. Twijfel je, vraag het je opdrachtgever.
+Bestanden zet je in de map `bewijs` van je repository: open die map op GitHub, klik op **Add file** en dan **Upload files**. Daarna link je het bestand bij een leerdoel als `bewijs/bestandsnaam.jpg`. Zet er geen namen, adressen of contactgegevens van bewoners, klanten of medewerkers in, en geen documenten die je opdrachtgever vertrouwelijk heeft gedeeld. Verwijs in zo'n geval naar het document zonder link, zoals in het voorbeeld bij leerdoel 2. Twijfel je, vraag het je opdrachtgever.
+
+## Voor wie meer wil weten
+
+Alle inhoud staat in één bestand, `data/portfolio.json`. De formulieren schrijven dat bestand voor je; wie wil, kan het ook rechtstreeks op GitHub bewerken. De site zelf bestaat uit `index.html`, de stylesheet in `assets/css` en drie scripts in `assets/js`. Meer over hoe GitHub en GitHub Pages werken lees je in hulpmiddel 15 (AI naar website) in de [studentenhandleiding](https://fabianb88.github.io/minor-ce-studentenhandleiding/).
+
+De map `_jekyll-versie` bevat een eerdere opzet van dit sjabloon en wordt niet gebruikt.

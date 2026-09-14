@@ -1,0 +1,106 @@
+{
+  "student": {
+    "naam": "Noor Jansen",
+    "opleiding": "Bedrijfskunde, HAN",
+    "cohort": "september 2026",
+    "repo": "",
+    "intro": "Ik ben derdejaars Bedrijfskunde en volg dit semester de minor Circulaire Economie. Mijn opdracht komt van Woonstichting Het Anker, een corporatie die veertig huurwoningen gaat renoveren en zich afvraagt of de bestaande keukens een tweede leven kunnen krijgen in plaats van in de container te belanden.\n\nOp deze site houd ik bij welke leerdoelen ik mezelf heb gesteld, waar ik sta en wat ik daarvoor heb gedaan. Het logboek is mijn wekelijkse voortgangsrapportage; elk bericht is gekoppeld aan de leerdoelen die het raakt en aan de tijdlijn van mijn project."
+  },
+  "leerdoelen": [
+    {
+      "id": "ld-keten",
+      "titel": "De materiaalketen van een product in kaart brengen",
+      "status": "bezig",
+      "voortgang": 45,
+      "streefdatum": "2026-11-06",
+      "beschrijving": "## Wat ik wil kunnen\n\nAan het einde van de minor kan ik van een product de hele keten tekenen, van grondstof tot afdanking, en per schakel benoemen waar waarde verloren gaat. Ik wil dat niet alleen uit rapporten halen, maar ook uit gesprekken met de mensen die de keuken plaatsen, gebruiken en slopen.\n\n## Waarom dit leerdoel\n\nIn de eerste week merkte ik dat ik meteen in oplossingen dacht (keukens opknappen en doorverkopen) zonder te weten wat er nu precies met een keuken gebeurt bij een renovatie. Zonder ketenbeeld kan ik niet onderbouwen waar ingrijpen zin heeft.",
+      "reflectie": "Ik heb een eerste ketenschets gemaakt op basis van het gesprek met de projectleider. De sloopkant (wie haalt de keuken eruit, waar gaat die naartoe) is nog een gat; daar wil ik de aannemer over spreken. De schets is bewust vroeg gemaakt: ik gebruik hem om in gesprekken te toetsen wat ik mis.",
+      "bewijs": [
+        { "tekst": "Eerste ketenschets van een keuken (logboek week 2)", "url": "#/update/up-week2" },
+        { "tekst": "Interviewvragen voor bewoners en de aannemer", "url": "bewijs/interviewvragen-bewoners.html" }
+      ]
+    },
+    {
+      "id": "ld-interview",
+      "titel": "Een interview voorbereiden, afnemen en verwerken",
+      "status": "behaald",
+      "voortgang": 100,
+      "streefdatum": "2026-10-02",
+      "beschrijving": "## Wat ik wil kunnen\n\nIk kan een interview zo voorbereiden dat ik open vragen stel en niet mijn eigen aanname bevestig, en ik kan het gesprek daarna verwerken tot inzichten die ik met de opdrachtgever kan delen.\n\n## Waarom dit leerdoel\n\nBij het startgesprek stelde ik vooral ja/nee-vragen en kreeg ik korte antwoorden. Mijn coach wees erop dat ik daarmee alleen hoor wat ik al dacht.",
+      "reflectie": "Ik heb drie bewoners gesproken met een vragenlijst die ik vooraf met een medestudent heb geoefend. Het grootste verschil met het startgesprek: ik begon met \"vertel eens hoe je je keuken gebruikt\" in plaats van \"zou je een tweedehands keuken willen\". Twee van de drie bewoners bleken helemaal niet om een nieuwe keuken te hebben gevraagd, dat kwam uit het renovatieplan. Dat inzicht heeft mijn probleemdefinitie verschoven en had ik met mijn oude vragen nooit gehoord. De uitwerking staat in het verslag dat ik met Het Anker heb gedeeld; omdat er namen en adressen in staan, staat het niet op deze site.",
+      "bewijs": [
+        { "tekst": "Interviewvragen voor bewoners en de aannemer", "url": "bewijs/interviewvragen-bewoners.html" },
+        { "tekst": "Verslag van drie bewonersgesprekken, gedeeld met de opdrachtgever (niet openbaar vanwege persoonsgegevens)", "url": "" }
+      ]
+    },
+    {
+      "id": "ld-onderbouwen",
+      "titel": "Keuzes onderbouwen met bronnen en cijfers",
+      "status": "gepland",
+      "voortgang": 0,
+      "streefdatum": "2026-12-11",
+      "beschrijving": "## Wat ik wil kunnen\n\nAls ik Het Anker straks adviseer om keukens te hergebruiken, wil ik dat kunnen onderbouwen met cijfers over kosten, CO2 en materiaal, en met bronnen die verder gaan dan een blogpost. Ik wil ook eerlijk kunnen zeggen wat ik niet weet.\n\n## Waarom dit leerdoel\n\nIn mijn vorige projecten kreeg ik terug dat mijn adviezen \"overtuigend klonken maar dun waren\". Dit is de minor waarin ik dat wil doorbreken.\n\n## Aanpak\n\nIk begin hiermee zodra de ketenschets staat, want dan weet ik welke schakels ik moet doorrekenen. Hulpmiddel 5 (Onderbouwen) uit de studentenhandleiding gebruik ik als checklist.",
+      "reflectie": "",
+      "bewijs": []
+    }
+  ],
+  "projecten": [
+    {
+      "id": "pr-keukens",
+      "titel": "Hergebruik van keukens bij de renovatie van veertig huurwoningen",
+      "opdrachtgever": "Woonstichting Het Anker",
+      "start": "2026-08-26",
+      "einde": "2027-01-22",
+      "beschrijving": "## Aanleiding\n\nHet Anker renoveert komend voorjaar veertig woningen in één complex. In het standaardplan gaat elke keuken eruit en komt er een nieuwe in, ongeacht de staat. De duurzaamheidsadviseur van de corporatie wil weten of dat anders kan.\n\n## De vraag\n\nWelke keukens kunnen blijven staan of elders opnieuw geplaatst worden, wat vraagt dat van het renovatieproces, en wat levert het op in geld en materiaal?\n\n## Waar ik nu sta\n\nIk heb de projectleider en drie bewoners gesproken en een eerste ketenschets gemaakt. De vraag is aan het verschuiven: een deel van de bewoners wil helemaal geen nieuwe keuken, dus \"hergebruik\" begint misschien bij \"niet slopen\".",
+      "leerdoelen": ["ld-keten", "ld-interview", "ld-onderbouwen"],
+      "momenten": [
+        { "datum": "2026-08-26", "titel": "Start van de minor", "focus": "Discover", "tekst": "Kick-off, kennismaking met de coachgroep en de eerste uitleg van de opdracht." },
+        { "datum": "2026-08-27", "titel": "Startgesprek met Het Anker", "focus": "Discover", "tekst": "Gesprek met de projectleider en de duurzaamheidsadviseur. Renovatieplan ontvangen." },
+        { "datum": "2026-09-03", "titel": "Ketenschets versie 1", "focus": "Discover", "tekst": "Eerste schets van de keten op A3, bewust rommelig, als gespreksinstrument." },
+        { "datum": "2026-09-09", "titel": "Drie bewonersgesprekken", "focus": "Discover", "tekst": "Interviews van een half uur met drie bewoners van het complex." },
+        { "datum": "2026-09-11", "titel": "De vraag verschuift", "focus": "Define", "tekst": "Van \"hoe hergebruiken we keukens\" naar \"welke keukens hoeven er niet uit\". Eerste versie probleemdefinitie." },
+        { "datum": "2026-09-18", "titel": "Gesprek met de aannemer", "focus": "Discover", "tekst": "Over de sloopkant van de keten: wie beslist, waar gaat het materiaal heen, wat kost het." },
+        { "datum": "2026-10-01", "titel": "Probleemdefinitie voorleggen aan Het Anker", "focus": "Define", "tekst": "Toetsen of de corporatie zich herkent in de verschoven vraag." },
+        { "datum": "2026-10-15", "titel": "Eerste ideeën en schetsen", "focus": "Develop", "tekst": "Brainstorm met de coachgroep, drie richtingen uitwerken." },
+        { "datum": "2026-11-12", "titel": "Tussenpresentatie", "focus": "Develop", "tekst": "Stand van zaken aan de opdrachtgever en de coach." },
+        { "datum": "2026-12-10", "titel": "Voorstel testen met bewoners en aannemer", "focus": "Develop", "tekst": "Reacties ophalen op het concept-voorstel." },
+        { "datum": "2027-01-14", "titel": "Eindpresentatie aan Het Anker", "focus": "Deliver", "tekst": "Advies en projectpaper opleveren." }
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "id": "up-week3",
+      "datum": "2026-09-11",
+      "titel": "Week 3: bewoners gesproken, de vraag verschuift",
+      "focus": "Define",
+      "project": "pr-keukens",
+      "leerdoelen": ["ld-keten", "ld-interview"],
+      "gedaan": "Drie bewonersgesprekken van elk een half uur, verslag gemaakt en gedeeld met de opdrachtgever. Leerdoel 2 op behaald gezet en de reflectie geschreven. Ketenschets aangevuld met wat bewoners vertelden over hoe ze hun keuken gebruiken.",
+      "geleerd": "Twee van de drie bewoners hebben nooit om een nieuwe keuken gevraagd; die zit in het standaardpakket van de renovatie. Daarmee verschuift mijn vraag van \"hoe hergebruiken we keukens\" naar \"welke keukens hoeven er helemaal niet uit\". Dat voelt als een stap terug, maar het is een scherpere probleemdefinitie. Ik zit deze week meer in Define dan in Discover, al lopen die door elkaar: het gesprek met de aannemer volgende week is weer verkennend.",
+      "volgende": "Gesprek met de aannemer over de sloopkant van de keten. Probleemdefinitie op papier zetten met hulpmiddel 11 en voorleggen aan Het Anker."
+    },
+    {
+      "id": "up-week2",
+      "datum": "2026-09-04",
+      "titel": "Week 2: eerste ketenschets",
+      "focus": "Discover",
+      "project": "pr-keukens",
+      "leerdoelen": ["ld-keten"],
+      "gedaan": "Een ketenschets van een keuken getekend op A3: van plaatmateriaal en beslag via de keukenfabrikant en de aannemer naar de bewoner, en daarna naar sloop, container en verwerker. Interviewvragen opgesteld voor bewoners en de aannemer en geoefend met een medestudent.",
+      "geleerd": "Tekenen bleek een manier van onderzoeken: bij de sloopkant kwam ik niet verder dan \"container\", en dat gat is precies waar ik de aannemer over moet spreken. De schets is nu mijn gespreksinstrument geworden. Hulpmiddel 10 (Ketenschets) hielp met de vaste stappen, maar de schets is bewust rommelig gebleven; ik wil hem in de gesprekken kunnen laten aanvullen.",
+      "volgende": "Drie bewonersgesprekken deze week. Daarna de schets bijwerken en met de aannemer om tafel."
+    },
+    {
+      "id": "up-week1",
+      "datum": "2026-08-28",
+      "titel": "Week 1: kennismaken met de opdracht",
+      "focus": "Discover",
+      "project": "pr-keukens",
+      "leerdoelen": ["ld-keten", "ld-interview"],
+      "gedaan": "Startgesprek gehad met de projectleider en de duurzaamheidsadviseur van Het Anker. Het renovatieplan doorgelezen. Mijn leerdoelen geformuleerd en besproken met mijn coach.",
+      "geleerd": "De corporatie denkt in bouwstromen: alles eruit, alles erin, in een strak tijdschema. Elke afwijking kost planningstijd en dat is voor hen het echte obstakel, niet de keuken zelf. Ik merkte dat ik in het gesprek te snel naar \"wat als we de keukens opknappen\" ging en daardoor weinig doorvroeg.",
+      "volgende": "Bewoners spreken en een eerste ketenschets maken, ook al weet ik nog lang niet alles. De schets helpt me juist om te zien wat ik nog moet vragen."
+    }
+  ]
+}
